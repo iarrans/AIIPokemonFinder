@@ -1,5 +1,5 @@
 import shelve
-from main.models import Pokemon, Tipo, Habilidad, GrupoHuevo
+from main.models import Pokemon
 from django.shortcuts import render, get_list_or_404
 from main.populateDB import populateDB
 

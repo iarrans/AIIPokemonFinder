@@ -22,4 +22,5 @@ urlpatterns = [
     path('populate/', views.populate),
     path('listaPokemon/', views.listaPokemon),
     path('buscar_color/', views.buscarPokemonPorColor),
+    path('pokemon_inicial/', views.buscarPokemonStatsSimilares),
 ]

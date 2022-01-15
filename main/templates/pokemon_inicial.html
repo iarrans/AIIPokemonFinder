@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Pokemon iniciales</title>
+</head>
+<body>
+<header>
+{% include 'base.html' %}
+
+<p>Elige un pokemon inicial para el que buscar opciones alternativas:</p>
+<form id='form' method='get' action=''>
+{{form.as_p}}
+<p><input type='submit' value='Confirm'/></p>
+</form>
+
+</body>
+</html>

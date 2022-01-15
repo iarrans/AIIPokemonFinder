@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Pokémon alternativos al inicial
+{% endblock %}
+
+{% block content %}
+
+<p>Se han encontrado los siguientes pokemon con stats parecidos al del inicial escogido</p>
+
+     <div id="pokemon_lista">
+     </div>
+     {% for poke in pokemons %}
+
+     <div id="pokemon_lista">
+     <p>{{poke.nombre}}</p>
+     <img src={{poke.url_imagen}}>
+
+     </div>
+ {% endfor %}
+
+{% endblock %}

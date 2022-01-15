@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Pokemon listar
+{% endblock %}
+
+{% block content %}
+
+<p>Se han encontrado los siguientes pokemon</p>
+ {% for poke in pokemons %}
+
+     <div id="pokemon_lista">
+     <p>{{poke.nombre}}</p>
+     <img src={{poke.url_imagen}}>
+
+     </div>
+ {% endfor %}
+
+{% endblock %}

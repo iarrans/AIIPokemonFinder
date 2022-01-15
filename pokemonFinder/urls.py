@@ -19,5 +19,7 @@ from main import views
 
 urlpatterns = [
     path('', views.index),
-    path('populate/', views.populate)
+    path('populate/', views.populate),
+    path('listaPokemon/', views.listaPokemon),
+    path('buscar_color/', views.buscarPokemonPorColor),
 ]

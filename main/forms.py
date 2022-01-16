@@ -15,7 +15,7 @@ class ColorForm(forms.Form):
 class InicialForm(forms.Form):
     poke = Pokemon.objects.all()
     opciones_poke = list()
-    for pokemon in poke[0:50]:
+    for pokemon in poke:
         if "/n" not in pokemon.color:
             opciones_poke.append((pokemon.nombre,pokemon.nombre))
     pokemon_inicial = forms.select = forms.ChoiceField(widget=forms.Select, choices=opciones_poke)

@@ -7,13 +7,35 @@ Pokemon listar
 {% block content %}
 
 <p>Se han encontrado los siguientes pokemon de color {{color}}:</p>
+    <div>
  {% for poke in pokemons %}
 
-     <div id="pokemon_lista">
-     <p>{{poke.nombre}}</p>
-     <img src={{poke.imagenurl}}>
+     <div id="pokemon_lista" class="center">
+     <table>
+     <tr>
+          <td>Nombre</td>
+          <td><strong>{{poke.nombre}}</strong></td>
+     </tr>
+      <tr>
+          <td>Generación</td>
+          <td><strong>{{poke.generacion}}</strong></td>
+     </tr>
+     <tr>
+          <td>Número de la pokédex</td>
+          <td><strong>{{poke.numPokedex}}</strong></td>
+     </tr>
+     <tr>
+          <td>Grupo Huevo</td>
+          <td><strong>{{poke.grupohuevo}}</strong></td>
+     </tr>
+     <tr>
+          <td>Color (coincide con la búsqueda)</td>
+          <td><strong>{{poke.color}}</strong></td>
+     </tr>
 
+     </table>
+     <img src={{poke.imagenurl}} style="margin-left: 25%;">
      </div>
  {% endfor %}
-
+</div>
 {% endblock %}

@@ -1,19 +1,58 @@
 {% extends 'base.html' %}
-
+<link rel="stylesheet" type="text/css" href="styles.css">
 {% block title %}
-Pokemon listar
+Todos los pokémon disponibles
 {% endblock %}
 
 {% block content %}
 
-<p>Se han encontrado los siguientes pokemon</p>
- {% for poke in pokemons %}
+<p>Se han encontrado los siguientes pokemon en nuestra base de datos:</p>
 
-     <div id="pokemon_lista">
-     <p>{{poke.nombre}}</p>
-     <img src={{poke.url_imagen}}>
+
+ {% for poke in pokemons %}
+     <div id="pokemon_lista" class="center">
+          <table>
+            <tr>
+                 <td>Nombre</td>
+                <td><strong>{{poke.nombre}}</strong></td>
+            </tr>
+            <tr>
+                 <td>Color</td>
+                <td>{{poke.color}}</td>
+            </tr>
+             <tr>
+                 <td>Número de la pokédex</td>
+                <td>{{poke.num_pokedex}}</td>
+            </tr>
+             <tr>
+                 <td>Generación</td>
+                <td>{{poke.generacion}}</td>
+            </tr>
+            <tr>
+                 <td>Hábitat</td>
+                <td>{{poke.habitat}}</td>
+            </tr>
+            <tr>
+                 <td>Tipo/s</td>
+                <td>{{poke.tipos}}</td>
+            </tr>
+            <tr>
+                 <td>Grupo huevo</td>
+                <td>{{poke.grupos_huevo}}</td>
+            </tr>
+             <tr>
+                 <td>Habilidad/es</td>
+                <td>{{poke.habilidades}}</td>
+            </tr>
+
+
+          </table>
+     <img src={{poke.url_imagen}} style="margin-left: 25%;">
 
      </div>
+
+
  {% endfor %}
+
 
 {% endblock %}

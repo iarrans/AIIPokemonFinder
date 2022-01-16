@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}
-Inicio
-{% endblock %}
 
 {% block content %}
 
-<p>Hola hola, probando vista principal</p>
-<img src="https://i.ytimg.com/vi/XzCj0lGfveU/maxresdefault.jpg" alt="pikachu">
+  <div class="center" style="margin-left: 2%;">
+    <h3 >Bienvenido a PokémonFinder, donde podrás encontrar al pokémon perfecto para tu equipo.</h3>
+    <p>Con "Poblar la base de datos", podrás cargar datos de los diferentes pokemon <span style="color:red;>¡Advertencia! Esto puede llevar unos minutos</span></p>
+    <p style="color:red;">¡Advertencia! Esto puede llevar unos minutos</p>
+    <p>Con "Listar pokemon", podrás listar en una única página todos los pokemon disponibles en el sistema</p>
+    <p>Con "Pokémon por color", podrás encontrar pokemons de un determinado tono, para que la paleta de colores de
+    tu equipo se vea estéticamente balanceada</p>
+    <p>Con "Pokémon alternativos", podrás encontrar pokemons con stats similares a otro pokemon elegido. De esta forma,
+    siempre te será más fácil encontrar sustitutos para tu equipo</p>
+  </div>
+<img src="https://i.ytimg.com/vi/XzCj0lGfveU/maxresdefault.jpg" alt="pikachu" height="300" class="center">
 {% endblock %}

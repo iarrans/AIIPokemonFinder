@@ -30,7 +30,7 @@ def buscarPokemonPorColor(request):
             ix = open_dir("Index")
             with ix.searcher() as searcher:
                 myquery = QueryParser("color", ix.schema).parse(color)
-                pokemons = searcher.search(myquery)
+                pokemons = searcher.search(myquery, limit=20)
                 return render(request,'listaPokemonColor.html',{'pokemons': pokemons,'color':color})
     form = ColorForm()
     return render(request,'buscar_color.html', {'form': form})
@@ -40,10 +40,8 @@ def buscarPokemonStatsSimilares(request):
         form = InicialForm(request.GET, request.FILES)
         if form.is_valid():
             nombre = form.cleaned_data['pokemon_inicial']
-            print("------------------------------------------------------------"+nombre)
             #Aquí va la función de las distancias entre stats
             pokemom = get_object_or_404(Pokemon, nombre=nombre)
-            print('----------------------------------------------------'+ str(pokemom))
             results = topMatches(pokemom, n=3)
             pokemons = list()
             for result in results:

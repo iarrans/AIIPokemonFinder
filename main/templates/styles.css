@@ -1,0 +1,10 @@
+.contenedor1 {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; /* requerido para alineación horizontal */
+}
+#pokemon_lista {
+        margin-left: 10%;
+        border: blueviolet 2px solid;
+        text-align: center;
+}
